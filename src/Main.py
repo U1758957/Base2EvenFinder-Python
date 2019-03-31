@@ -81,14 +81,14 @@ def main(time, thread):
 if __name__ == "__main__":
     length = len(argv)
     if length == 2:
-        time_to_run = argv[1]
-        thread_count = cpu_count()
+        time_to_run = int(argv[1])
+        thread_count = int(cpu_count())
     elif length == 3:
-        time_to_run = argv[1]
-        thread_count = argv[2]
+        time_to_run = int(argv[1])
+        thread_count = int(argv[2])
     else:
-        time_to_run = 60
-        thread_count = cpu_count()
+        time_to_run = int(60)
+        thread_count = int(cpu_count())
     if time_to_run == 1:
         sec = "second"
     else:
